@@ -1,4 +1,14 @@
+## 目录结构 (Directory Structure)
 
+Plaintext
+
+```
+.
+├── docs/               # 设计文档与架构图 (Draw.io/PDF)
+├── models/             # Simulink 模型 (.slx) 及配套脚本 (.m, .mat, .capr)
+├── tests/              # 测试用例与仿真数据
+└── README.md           # 项目说明
+```
 
 ## 系统架构 (System Architecture)
 
@@ -74,4 +84,46 @@
 2. **Clone 到本地**
    ```bash
    git clone [https://github.com/你的用户名/ProjectName.git](https://github.com/你的用户名/ProjectName.git)
+
+   1. **创建开发分支 (Branch)** 请务必在分支上进行开发，不要直接修改 main 分支。 *命名规范：`feat/模块名` 或 `fix/bug描述`*
+
+   Bash
+
+   ```
+   git checkout -b feat/sliding_mode_control
+   ```
+
+2. **开发与打包**
+
+   - 编写代码/模型。
+   - **更新架构图**（如有变动）。
+   - **整理所有依赖文件**（.slx, .m, .mat, .capr等）。
+
+3. **提交更改 (Commit)** 提交信息请简要描述修改内容。
+
+   Bash
+
+   ```
+   git add .
+   git commit -m "feat: 完成滑模控制前后轴分配算法实现，并更新对应架构图"
+   ```
+
+4. **推送分支 (Push)**
+
+   Bash
+
+   ```
+   git push origin feat/sliding_mode_control
+   ```
+
+5. **发起 Pull Request (PR)** 回到原仓库页面，点击 `New Pull Request`，请求将你的分支合并到 `main` 分支。请在 PR 描述中说明你完成了哪个功能点。
+
+------
+
+
+## 注意事项
+
+- 修改模型前请先拉取最新代码：`git pull origin main`
+- 所有新增算法模块需包含详细的输入输出注释。
+
 
