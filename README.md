@@ -73,14 +73,14 @@
    点击右上角的 `Fork` 按钮，将项目复制到你自己的 GitHub 账户。
 
 2. **Clone 到本地**
+
    ```bash
    git clone [https://github.com/你的用户名/ProjectName.git](https://github.com/你的用户名/ProjectName.git)
-
-   1. **创建开发分支 (Branch)** 请务必在分支上进行开发，不要直接修改 main 分支。 *命名规范：`feat/模块名` 或 `fix/bug描述`*
-
-   Bash
-
    ```
+
+   **创建开发分支 (Branch)** 请务必在分支上进行开发，不要直接修改 main 分支。 *命名规范：`feat/模块名` 或 `fix/bug描述`*
+
+   ```bash
    git checkout -b feat/sliding_mode_control
    ```
 
@@ -92,18 +92,14 @@
 
 3. **提交更改 (Commit)** 提交信息请简要描述修改内容。
 
-   Bash
-
-   ```
+   ```bash
    git add .
    git commit -m "feat: 完成滑模控制前后轴分配算法实现，并更新对应架构图"
    ```
 
 4. **推送分支 (Push)**
 
-   Bash
-
-   ```
+   ```bash
    git push origin feat/sliding_mode_control
    ```
 
